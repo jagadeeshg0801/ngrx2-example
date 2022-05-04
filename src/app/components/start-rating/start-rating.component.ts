@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartRatingComponent implements OnInit {
 
-  public totalStars = 6;
+  public totalStars = 5;
   public eachStarOccupancyRange = 100/this.totalStars;
   public ratings =[
     {
