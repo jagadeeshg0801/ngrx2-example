@@ -1,0 +1,34 @@
+.rating-outlet {
+    border: 1px solid #f1e3ee;
+    padding: 10px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 4px;
+}
+.rating-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.stars-outer::before{
+    content: '\f006 \f006 \f006 \f006 \f006';
+}
+.stars-outer{
+    display:inline-block;
+    position: relative;
+    font-family: "FontAwesome";
+}
+
+.stars-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.stars-inner::before{
+    content: '\f005 \f005 \f005 \f005 \f005';
+}

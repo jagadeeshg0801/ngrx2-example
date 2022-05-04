@@ -9,7 +9,7 @@ export function counterReducer(stateCount = initialCount, action: any){
         case 'Increment': 
             if(stateCount ==10){
                 alert('You reached max limit');
-                return stateCount;
+                return stateCount;  
             }
             return stateCount + 1; 
             break;

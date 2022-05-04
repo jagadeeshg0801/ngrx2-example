@@ -8,13 +8,15 @@ import { counterReducer } from './state/counter.reducer';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BodyComponent } from './components/body/body.component';
+import { StartRatingComponent } from './components/start-rating/start-rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    StartRatingComponent
   ],
   imports: [
     BrowserModule,
