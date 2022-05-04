@@ -5,7 +5,7 @@
 <div class="rating-outlet" *ngFor="let item of ratings">
     <div class="rating-stars-icon">{{item.rating}}
         <div class="stars-outer">
-            <div class="stars-inner" [ngStyle]="{'width': item.rating * 20 +'%'}"></div>
+            <div class="stars-inner" [ngStyle]="{'width': item.rating * eachStarOccupancyRange +'%'}"></div>
         </div>
     </div>
     <div class="rating-name">{{item.name}}</div>
