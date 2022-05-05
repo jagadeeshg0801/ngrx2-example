@@ -16,7 +16,7 @@ export class StartRatingComponent implements OnInit {
       content: 'hello this sample content hello this sample content hello this sample content hello this sample content'
     },{
       name: 'ABC',
-      rating: 3.5,
+      rating: 1.5,
       content: 'hello this sample content hello this sample content hello this sample content hello this sample content'
     },{
       name: 'Vsh',
@@ -28,7 +28,12 @@ export class StartRatingComponent implements OnInit {
       content: 'hello this sample content hello this sample content hello this sample content hello this sample content'
     },{
       name: 'Som',
-      rating: 2.5,
+      rating: 1.5,
+      content: 'hello this sample content hello this sample content hello this sample content hello this sample content'
+    },
+    {
+      name: 'Lax',
+      rating: 4.5,
       content: 'hello this sample content hello this sample content hello this sample content hello this sample content'
     },
   ];
