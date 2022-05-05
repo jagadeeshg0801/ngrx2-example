@@ -32,3 +32,17 @@
 .stars-inner::before{
     content: '\f005 \f005 \f005 \f005 \f005';
 }
+
+/* FOr HTML Font-awesome css */
+.empty-stars-container {
+    position: relative;
+}
+.filled-start, .empty-stars{
+    display: inline-block;
+}
+.filled-stars-container {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    top: 0;
+}

@@ -2,12 +2,34 @@
 
 <hr/>
 <h5>User Ratings</h5>
-<div class="rating-outlet" *ngFor="let item of ratings">
-    <div class="rating-stars-icon">{{item.rating}}
-        <div class="stars-outer">
-            <div class="stars-inner" [ngStyle]="{'width': item.rating * eachStarOccupancyRange +'%'}"></div>
-        </div>
+<input type="radio" name="r1" value="html-content" checked (click)="onType('css')"/>Using CSS only
+<input type="radio" name="r1" value="html-content"(click)="onType('html')"  />Using HTML only (font-awesome Tags)
+<div class="" *ngIf="isCssType">
+    <!-- this is the block for stars rating implementation by using CSS font-awesome icon code -->
+    <div class="rating-outlet" *ngFor="let item of ratingsForCss">
+        <div class="rating-stars-icon">{{item.rating}}
+            <div class="stars-outer">
+                <div class="stars-inner" [ngStyle]="{'width': item.rating * eachStarOccupancyRange +'%'}"></div> 
+            </div>
+        </div>  
+        <div class="rating-name">{{item.name}}</div>
+        <div class="rating-content">{{item.content}}</div>
     </div>
-    <div class="rating-name">{{item.name}}</div>
-    <div class="rating-content">{{item.content}}</div>
+    
+</div>
+<div class="" *ngIf="!isCssType">
+    <p><b><u>Note:</u></b> Here Decimal numbers are rounded to the next Number ( Eg. 3.5 => 4)</p>
+<!-- this is the block for stars rating implementation by using font-awesome elements code -->
+    <div class="rating-outlet" *ngFor="let item of ratingsForCss">Rating : {{item.rating}}  <span>( Approx. Its {{item.rating | number:'1.0-0'}} )</span>
+        <div class="rating-stars-icon empty-stars-container">
+            <div class="empty-stars" *ngFor="let emptyStar of emptyratingIcons" style="color: #aaaba2;"><i class="fa fa-duotone fa-star"></i></div>
+            <div class="filled-stars-container">
+                <ng-container  *ngFor="let emptyStar of emptyratingIcons; let i=index">
+                    <div class="filled-start" *ngIf="i < item.rating" style="color:#0d45fd;"><i class="fa fa-solid fa-star"></i></div> 
+                </ng-container>
+            </div>
+        </div>  
+        <div class="rating-name">{{item.name}}</div>
+        <div class="rating-content">{{item.content}}</div>
+    </div>
 </div>
